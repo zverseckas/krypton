@@ -7,7 +7,7 @@ elixir:
   - 1.6
 
 addons:
-    postgresql: "10.3"
+    postgresql: "9.6"
 services:
     - postgresql
 
