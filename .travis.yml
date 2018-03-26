@@ -13,6 +13,7 @@ services:
 
 env:
   - MIX_ENV=test
+  - DATABASE_URL=ecto://postgres:postgres@postgres/krypton_dev
 
 script:
   - mix test && mix coveralls.travis
