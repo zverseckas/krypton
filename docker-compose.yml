@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  web:
+    image: docker.io/zverseckas/krypton
+    command: mix phx.server
+    environment:
+      - MIX_ENV=dev
+      - PORT=4000
+      - DATABASE_URL=ecto://postgres:postgres@postgres/krypton_dev
+    volumes:
+      - .:/app
+    ports:
+      - "4000:4000"
+    links:
+      - postgres
+
+  postgres:
+    image: postgres:10.3
+    ports:
+      - "5432:5432"
