@@ -12,8 +12,5 @@ config :logger, level: :warn
 # Configure your database
 config :krypton, Krypton.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "krypton_test",
-  hostname: "localhost",
+  url: System.get_env("DATABASE_URL"),
   pool: Ecto.Adapters.SQL.Sandbox
