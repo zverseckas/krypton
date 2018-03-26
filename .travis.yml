@@ -14,5 +14,8 @@ services:
 env:
   - MIX_ENV=test DATABASE_URL=ecto://postgres:postgres@postgres/krypton_test
 
+before_script:
+  - mix do ecto.create, ecto.migrate
+
 script:
   - mix test && mix coveralls.travis
