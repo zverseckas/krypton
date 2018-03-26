@@ -1,0 +1,11 @@
+engines:
+  credo:
+    enabled: true
+  fixme:
+    enabled: true
+exclude_paths:
+- _build
+- config
+- deps
+- priv
+- test
