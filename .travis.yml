@@ -20,7 +20,10 @@ env:
     - DB_HOST=localhost
 
 before_script:
-  - mix do ecto.create, ecto.migrate
+  - mix do deps.get, ecto.create, ecto.migrate
 
 script:
   - mix test && mix coveralls.travis
+
+after_script:
+  - mix inch.report
