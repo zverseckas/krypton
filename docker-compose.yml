@@ -7,7 +7,10 @@ services:
     environment:
       - MIX_ENV=dev
       - PORT=4000
-      - DATABASE_URL=ecto://postgres:postgres@postgres/krypton_dev
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=krypton_dev
+      - DB_HOST=postgres
     volumes:
       - .:/app
     ports:

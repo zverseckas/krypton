@@ -12,7 +12,12 @@ services:
     - postgresql
 
 env:
-  - MIX_ENV=test DATABASE_URL=ecto://postgres:postgres@postgres/krypton_test
+  global:
+    - MIX_ENV=test
+    - DB_USERNAME=postgres
+    - DB_PASSWORD=postgres
+    - DB_NAME=krypton_test
+    - DB_HOST=localhost
 
 before_script:
   - mix do ecto.create, ecto.migrate

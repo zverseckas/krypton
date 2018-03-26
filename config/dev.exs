@@ -39,5 +39,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :krypton, Krypton.Repo,
   adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABASE_URL"),
+  username: System.get_env("DB_USERNAME"),
+  password: System.get_env("DB_PASSWORD"),
+  database: System.get_env("DB_NAME"),
+  hostname: System.get_env("DB_HOST"),
   pool_size: 10
