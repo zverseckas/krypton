@@ -32,7 +32,7 @@ defmodule Krypton.Mixfile do
   end
 
   # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(:test), do: ["lib", "test/support", "test/factories"]
   defp elixirc_paths(_),     do: ["lib"]
 
   # Specifies your project dependencies.
@@ -47,7 +47,10 @@ defmodule Krypton.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:excoveralls, "~> 0.8", only: :test},
-      {:inch_ex, "~> 0.5", only: [:dev, :test]}
+      {:inch_ex, "~> 0.5", only: [:dev, :test]},
+      {:bcrypt_elixir, "~> 1.0"},
+      {:ex_machina, "~> 2.1", only: :test},
+      {:faker, "~> 0.9", only: :test}
     ]
   end
 
