@@ -1,4 +1,8 @@
 defmodule Krypton.ClientFactory do
+  @moduledoc """
+  Factory for building clients
+  """
+  
   defmacro __using__(_opts) do
     quote do
       alias Krypton.Clients.Client
@@ -11,7 +15,7 @@ defmodule Krypton.ClientFactory do
           home_url: Faker.Internet.url(),
           redirect_urls: Faker.Internet.url(),
           privacy_policy_url: Faker.Internet.url(),
-          image_url: Faker.Internet.image_url(),
+          image_url: Faker.Internet.image_url()
         }
       end
     end

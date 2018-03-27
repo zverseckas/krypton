@@ -13,7 +13,7 @@ defmodule KryptonWeb.ClientControllerTest do
   describe "index" do
     test "lists all clients", %{conn: conn, client: client} do
       conn = get conn, client_path(conn, :index)
-      
+
       data = json_response(conn, 200)["data"]
       [client_json | _tail] = data
 

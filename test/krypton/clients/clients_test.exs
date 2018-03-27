@@ -1,7 +1,9 @@
 defmodule Krypton.ClientsTest do
   use Krypton.DataCase, async: true
 
-  alias Krypton.{Clients, Clients.Client}
+  alias Krypton.Clients
+  alias Krypton.Clients.Client
+
   import Krypton.Factory
 
   @clients_count 3
@@ -14,7 +16,7 @@ defmodule Krypton.ClientsTest do
   describe "clients" do
     test "list_clients/0 returns a list of all clients" do
       clients = Clients.list_clients()
-      
+
       assert length(clients) == @clients_count
       assert [%Client{} | _tail] = clients
     end

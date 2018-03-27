@@ -1,4 +1,8 @@
 defmodule Krypton.Clients.ClientValidator do
+  @moduledoc """
+  Module for client validation
+  """
+
   import Ecto.Changeset
 
   @behaviour Krypton.Behaviours.Validator

@@ -2,10 +2,8 @@ defmodule Krypton.ClientValidatorTest do
   use Krypton.DataCase, async: true
   import Krypton.Factory
 
-  alias Krypton.Clients.{
-    Client,
-    ClientValidator
-  }
+  alias Krypton.Clients.Client
+  alias Krypton.ClientValidator
 
   describe "client_validator" do
     setup :changeset

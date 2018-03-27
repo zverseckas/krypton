@@ -1,11 +1,13 @@
 defmodule Krypton.Clients.Client do
+  @moduledoc """
+  Client model
+  """
+
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias Krypton.Clients.{
-    Client,
-    ClientValidator
-  }
+  alias Krypton.ClientsClient
+  alias Krypton.ClientValidator
 
   @attributes ~w(
     secret
@@ -28,7 +30,7 @@ defmodule Krypton.Clients.Client do
     field :redirect_urls, :string
     field :privacy_policy_url, :string
     field :image_url, :string
-    
+
     timestamps()
   end
 
