@@ -3,7 +3,7 @@ defmodule Krypton.ClientValidatorTest do
   import Krypton.Factory
 
   alias Krypton.Clients.Client
-  alias Krypton.ClientValidator
+  alias Krypton.Clients.ClientValidator
 
   describe "client_validator" do
     setup :changeset

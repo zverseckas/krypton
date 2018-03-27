@@ -6,8 +6,8 @@ defmodule Krypton.Clients.Client do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias Krypton.ClientsClient
-  alias Krypton.ClientValidator
+  alias Krypton.Clients.Client
+  alias Krypton.Clients.ClientValidator
 
   @attributes ~w(
     secret

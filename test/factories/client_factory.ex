@@ -2,7 +2,7 @@ defmodule Krypton.ClientFactory do
   @moduledoc """
   Factory for building clients
   """
-  
+
   defmacro __using__(_opts) do
     quote do
       alias Krypton.Clients.Client
